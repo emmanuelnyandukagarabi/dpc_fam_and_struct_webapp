@@ -26,6 +26,7 @@ urlpatterns = [
     path('protein/<str:protein_id>/', views.protein_detail, name='protein_detail'),
     path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
     path('faqs/', TemplateView.as_view(template_name='faqs.html'), name='faqs'),
+    path('api/', include('dpc_fam_and_struct_webapp.api_urls')),
     path('admin/', admin.site.urls),
     path('dpcfam/', include('dpcfam.urls')),
     path('dpcstruct/', include('dpcstruct.urls')),
